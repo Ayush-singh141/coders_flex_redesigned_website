@@ -1,3 +1,4 @@
+"use client";
 import GridDistortion from "./GridDistortion";
 import InfiniteTextScroller from "./InfiniteScroller";
 
