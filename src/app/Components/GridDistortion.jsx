@@ -55,7 +55,9 @@ const GridDistortion = ({
       alpha: true,
       powerPreference: "high-performance",
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(
+      Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 2)
+    );
     renderer.setClearColor(0x000000, 0);
     rendererRef.current = renderer;
 

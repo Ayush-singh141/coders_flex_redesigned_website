@@ -72,7 +72,8 @@ const DotGrid = ({
     if (!wrap || !canvas) return;
 
     const { width, height } = wrap.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
+    const dpr =
+      typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
 
     canvas.width = width * dpr;
     canvas.height = height * dpr;
